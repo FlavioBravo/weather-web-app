@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { AddName } from './AddName';
 import { Grid } from './Grid';
 
-export const Home = ({ defaultCities = [], history }) => {
+export const Home = ({ defaultCities = [] }) => {
 
     const [cities, setCities] = useState( defaultCities );
 

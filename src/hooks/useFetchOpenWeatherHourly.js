@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import { get5daysForecast } from '../helpers/get5daysForecast';
+import { getHourlyForecast } from '../helpers/getHourlyForecast';
 
 
-export const useFetchOpenWeather = ( cityId ) => {
+export const useFetchOpenWeatherHourly = ( lat, lon ) => {
     
     const [state, setState] = useState({
         data: [],
@@ -11,16 +11,16 @@ export const useFetchOpenWeather = ( cityId ) => {
 
     useEffect( () => {
 
-        get5daysForecast( cityId )
-            .then( forecast => {
+        getHourlyForecast( lat, lon )
+            .then( hourly => {
                 
                 setState({
-                    data: forecast,
+                    data: hourly,
                     loading: false
                 });
             })
 
-    }, [cityId])
+    }, [lat, lon])
 
     return state;
 

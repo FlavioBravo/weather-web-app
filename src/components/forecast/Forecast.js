@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useState } from 'react';
 import { useParams } from "react-router-dom";
 
 import { useFetchOpenWeather } from '../../hooks/useFetchOpenWeather';
@@ -9,7 +9,19 @@ export const Forecast = () => {
     const { cityId } = useParams();
 
     const { data: daysForecast, loading } = useFetchOpenWeather(cityId);
-    console.log(daysForecast);
+
+    const [state, setState] = useState({
+        hourlyItem: null,
+        show: false
+    });
+    
+    const setHourForecast = (hourly) => {
+        setState({
+            hourlyItem: { ...hourly },
+            show: true
+        });
+    };
+
     return (
         <>
             <h2>Forecast</h2>
@@ -21,10 +33,26 @@ export const Forecast = () => {
                     <GridItemForecast
                         key={day.dt_txt}
                         {...day}
+                        setHourForecast = { setHourForecast }
                     />
                   ))
               }
           </div>
+          <br />
+          <br />
+            {
+               state.show && 
+                <div>
+                    <h3>Hourly Forecast</h3>
+                    <p>Temperature: { state.hourlyItem.temp } °</p>
+                    <p>Human Perception: { state.hourlyItem.feels_like } °</p>
+                    <p>Humidity: { state.hourlyItem.humidity } %</p>
+                    <p>Clouds: { state.hourlyItem.clouds } %</p>
+                    <p>Pressure: { state.hourlyItem.pressure } hPa</p>
+                    <p>Uvi: { state.hourlyItem.uvi } UV</p>
+                </div>
+            }
+
         </>
     )
 }

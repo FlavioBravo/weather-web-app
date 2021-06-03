@@ -1,13 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { getDayNameOfWeek } from '../../helpers/utils';
+import { useFetchOpenWeatherHourly } from '../../hooks/useFetchOpenWeatherHourly';
 
-export const GridItemForecast = ({ temp_min, temp_max, weather, icon, dt_txt }) => {
+export const GridItemForecast = ({ dt, temp_min, temp_max, weather, icon, dt_txt, lat, lon, setHourForecast }) => {
 
     const dayName = getDayNameOfWeek(dt_txt);
+    const dateFormat = dt_txt.split(' ')[0];
+
+    const { data: hourly, loading } = useFetchOpenWeatherHourly(lat, lon);
+
+    const handleForecast = () => {
+        const hourlyForecast = hourly.filter(item => item.dt === dt);
+        setHourForecast(hourlyForecast[0]);
+    };
 
     return (
-        <div className="animate__animated animate__fadeIn forecast_grid_item">
+        <div className="animate__animated animate__fadeIn forecast_grid_item" onClick={ handleForecast } >
             <p> { dayName } </p>
             <p> { weather } </p>
             <img src={ icon } alt={ weather } height="80" width="80" />
@@ -15,6 +24,7 @@ export const GridItemForecast = ({ temp_min, temp_max, weather, icon, dt_txt }) 
                 <span>{ temp_min }°</span>
                 <span>{ temp_max }°</span>
             </div>
+            <p> { dateFormat } </p>
         </div>
     )
 }
