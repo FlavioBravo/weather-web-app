@@ -22,12 +22,15 @@ export const AddName = ({ setCities }) => {
     return (
         <form onSubmit={handleSubmit}>
             <h4>Filters</h4>
+            <br />
             <label>Name:</label>
+            <br />
             <p> {inputValue} </p>
             <input
                 type="text"
                 value={inputValue}
                 onChange={handleInputChange}
+                placeholder="Write city name here ..."
             />
         </form>
     )

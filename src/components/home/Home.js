@@ -10,9 +10,10 @@ export const Home = ({ defaultCities = [] }) => {
     return (
       <>
           <h2>Weather Web App</h2>
+          <br />
           <AddName setCities={ setCities } />
+          <br />
           <hr />
-
           <ol>
               {
                   cities.map( city  => (
@@ -23,7 +24,6 @@ export const Home = ({ defaultCities = [] }) => {
                   ))
               }
           </ol>
-
       </>
   )
 }

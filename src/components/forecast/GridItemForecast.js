@@ -11,8 +11,7 @@ export const GridItemForecast = ({ dt, temp_min, temp_max, weather, icon, dt_txt
     const { data: hourly, loading } = useFetchOpenWeatherHourly(lat, lon);
 
     const handleForecast = () => {
-        const hourlyForecast = hourly.filter(item => item.dt === dt);
-        setHourForecast(hourlyForecast[0]);
+        setHourForecast(hourly);
     };
 
     return (

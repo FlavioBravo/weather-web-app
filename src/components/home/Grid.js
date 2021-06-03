@@ -10,8 +10,9 @@ export const Grid = ({ city }) => {
 
     return (
         <>
+            <br />
             <h3 className="animate__animated animate__fadeIn"> {city} </h3>
-
+            <br />
             { loading && <p className="animate__animated animate__flash">Loading</p>}
 
             <table className="">
