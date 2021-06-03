@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <AppRouter /> debe de mostrar el Home por defecto 1`] = `
+<BrowserRouter>
+  <div
+    className="main"
+  >
+    <Switch>
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/forecast/:cityId"
+      />
+    </Switch>
+  </div>
+</BrowserRouter>
+`;
+
+exports[`Pruebas en <AppRouter /> debe de mostrarse correctamente 1`] = `
+<BrowserRouter>
+  <div
+    className="main"
+  >
+    <Switch>
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/forecast/:cityId"
+      />
+    </Switch>
+  </div>
+</BrowserRouter>
+`;
