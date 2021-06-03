@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <GridDetails /> debe de mostrar el componente correctamente 1`] = `
+<div>
+  <br />
+  <hr />
+  <br />
+  <h3>
+    Hourly Forecast
+  </h3>
+  <br />
+  <div
+    className="gridDetails_container"
+  >
+    <p
+      className="gridDetails_linespace"
+      key="1622224800"
+    >
+      Temperature: 
+      299.07
+       ° | Human Perception: 
+      299.65
+       ° | Humidity: 
+      74
+       % | Clouds: 
+      42
+       % | Pressure: 
+      1011
+       hPa | Uvi: 
+      10.54
+       UV
+    </p>
+    <p
+      className="gridDetails_linespace"
+      key="1622228400"
+    >
+      Temperature: 
+      298.91
+       ° | Human Perception: 
+      299.5
+       ° | Humidity: 
+      75
+       % | Clouds: 
+      45
+       % | Pressure: 
+      1011
+       hPa | Uvi: 
+      8.82
+       UV
+    </p>
+    <p
+      className="gridDetails_linespace"
+      key="1622232000"
+    >
+      Temperature: 
+      298.65
+       ° | Human Perception: 
+      299.24
+       ° | Humidity: 
+      76
+       % | Clouds: 
+      51
+       % | Pressure: 
+      1011
+       hPa | Uvi: 
+      5.79
+       UV
+    </p>
+  </div>
+</div>
+`;

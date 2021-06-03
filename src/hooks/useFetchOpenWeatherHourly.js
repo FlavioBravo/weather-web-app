@@ -10,16 +10,17 @@ export const useFetchOpenWeatherHourly = ( lat, lon ) => {
     });
 
     useEffect( () => {
-
+        let isSubscribed = true;
         getHourlyForecast( lat, lon )
             .then( hourly => {
-                
-                setState({
-                    data: hourly,
-                    loading: false
-                });
+                if (isSubscribed) {
+                    setState({
+                        data: hourly,
+                        loading: false
+                    });
+                }
             })
-
+        return () => isSubscribed = false;
     }, [lat, lon])
 
     return state;

@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <GridItem /> debe de mostrar el componente correctamente 1`] = `
+<tr
+  className="animate__animated animate__fadeIn"
+  onClick={[Function]}
+>
+  <td>
+     
+    3690608
+     
+  </td>
+  <td>
+     
+    Zorritos
+     
+  </td>
+  <td>
+     
+     
+  </td>
+  <td>
+     
+    PE
+     
+  </td>
+  <td>
+     
+    -80.678192
+     
+  </td>
+  <td>
+     
+    -3.68046
+     
+  </td>
+</tr>
+`;

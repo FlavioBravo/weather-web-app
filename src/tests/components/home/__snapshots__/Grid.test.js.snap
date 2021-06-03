@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en el <Grid /> debe de mostrarse correctamente 1`] = `
+<Fragment>
+  <br />
+  <h3
+    className="animate__animated animate__fadeIn"
+  >
+     
+    Tum
+     
+  </h3>
+  <br />
+  <p
+    className="animate__animated animate__flash"
+  >
+    Loading
+  </p>
+  <table
+    className=""
+  >
+    <thead>
+      <tr>
+        <th>
+          ID
+        </th>
+        <th>
+          Name
+        </th>
+        <th>
+          State
+        </th>
+        <th>
+          Country
+        </th>
+        <th>
+          Longitude
+        </th>
+        <th>
+          Latitude
+        </th>
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+</Fragment>
+`;

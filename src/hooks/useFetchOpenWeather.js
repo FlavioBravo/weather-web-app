@@ -10,16 +10,17 @@ export const useFetchOpenWeather = ( cityId ) => {
     });
 
     useEffect( () => {
-
+        let isSubscribed = true;
         get5daysForecast( cityId )
             .then( forecast => {
-                
-                setState({
-                    data: forecast,
-                    loading: false
-                });
+                if (isSubscribed) {
+                    setState({
+                        data: forecast,
+                        loading: false
+                    });
+                }
             })
-
+        return () => isSubscribed = false;
     }, [cityId])
 
     return state;

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <AddName /> debe de mostrarse correctamente 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <h4>
+    Filters
+  </h4>
+  <br />
+  <label>
+    Name:
+  </label>
+  <br />
+  <p>
+     
+     
+  </p>
+  <input
+    onChange={[Function]}
+    placeholder="Write city name here ..."
+    type="text"
+    value=""
+  />
+</form>
+`;

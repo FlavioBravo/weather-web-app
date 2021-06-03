@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en el <GridItemForecast /> debe de mostrarse correctamente 1`] = `
+<div
+  className="animate__animated animate__fadeIn forecast_grid_item"
+  onClick={[Function]}
+>
+  <p>
+     
+    Friday
+     
+  </p>
+  <p>
+     
+    Clouds
+     
+  </p>
+  <img
+    alt="Clouds"
+    height="80"
+    src="http://openweathermap.org/img/wn/04d.png"
+    width="80"
+  />
+  <div
+    className="forecast_grid_item_footer"
+  >
+    <span>
+      21.95
+      °
+    </span>
+    <span>
+      21.95
+      °
+    </span>
+  </div>
+  <p>
+     
+    2021-06-04
+     
+  </p>
+</div>
+`;
