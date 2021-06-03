@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react'
-import { getCities } from '../helpers/getCities';
+import { useState, useEffect } from 'react';
+import { get5daysForecast } from '../helpers/get5daysForecast';
 
 
-export const useFetchCities = ( city ) => {
+export const useFetchOpenWeather = ( cityId ) => {
     
     const [state, setState] = useState({
         data: [],
@@ -11,7 +11,7 @@ export const useFetchCities = ( city ) => {
 
     useEffect( () => {
 
-        getCities( city )
+        get5daysForecast( cityId )
             .then( imgs => {
                 
                 setState({
@@ -20,7 +20,7 @@ export const useFetchCities = ( city ) => {
                 });
             })
 
-    }, [city])
+    }, [cityId])
 
     return state;
 
